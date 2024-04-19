@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.container > div {
+  overflow-x: hidden; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrolling */
+  white-space: nowrap;
+}

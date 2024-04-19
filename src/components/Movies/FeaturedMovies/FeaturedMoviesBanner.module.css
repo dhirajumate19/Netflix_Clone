@@ -1,0 +1,27 @@
+/* FeaturedMoviesBanner.css */
+.featuredmoviescontainer {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  width: 100%; /* Set the width to 100% of its parent container */
+  scrollbar-width: none; /* Hide scrollbar for browsers that support it */
+  -ms-overflow-style: none;
+}
+
+.featuredmovieswrapper {
+  display: flex;
+  width: max-content; /* Set the width to fit the content of its children */
+  transition: transform 0.5s ease;
+}
+
+.featuredmovieitem {
+  flex: 0 0 auto; /* Ensure each movie takes up the minimum required space */
+  margin-right: 16px; /* Addjust spacing between movies as needed */
+}
+
+.featuredmovieitem:last-child {
+  margin-right: 0; /* ; /* Remove margin from the last movie to prevent extra spacing */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.featuredmoviescontainer::-webkit-scrollbar {
+  display: none;
+}

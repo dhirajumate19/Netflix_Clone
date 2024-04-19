@@ -1,0 +1,9 @@
+.itemDiv {
+  display: "flex";
+  align-items: "center";
+}
+.itemLink {
+  color: "#4e83de";
+  margin-right: 20px;
+  text-decoration: none;
+}
