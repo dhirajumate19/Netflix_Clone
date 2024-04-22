@@ -1,0 +1,10 @@
+/* MovieCard.module.css */
+.movieCard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px; /* Adjust margin bottom as needed */
+}
+
+.movieDetails {
+  margin-left: 16px; /* Adjust margin left as needed */
+}

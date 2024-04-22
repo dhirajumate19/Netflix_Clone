@@ -5,13 +5,18 @@ import NowPlaying from "../Movies/NowPlaying/NowPlaying";
 import style from "./Home.module.css";
 import UpcomingMovies from "../Movies/UpcomingMovies/UpcomingMovies";
 import TopRatedMovies from "../Movies/TopRatedMovies/TopRatedMovies";
-import FeaturedMovie from "../Movies/FeaturedMovies/FeaturedMoviesBanner";
 import Banner from "../Movies/FeaturedMovies/Banner";
+import SearchResults from "../SearchBar/SearchResults";
 
-function Home() {
+const Home = ({ searchResults }) => {
+  console.log("home compo", searchResults);
   return (
     <div className={style.container}>
-      <Banner />
+      {searchResults.length === 0 ? (
+        <Banner />
+      ) : (
+        <SearchResults results={searchResults} />
+      )}
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h4" gutterBottom>
@@ -41,6 +46,6 @@ function Home() {
       </Grid>
     </div>
   );
-}
+};
 
 export default Home;

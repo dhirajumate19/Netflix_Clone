@@ -1,38 +1,37 @@
-/* FeaturedMovie.css */
-.featuredmoviebanner {
+/* FeaturedMovie.module.css */
+.featuredMovie {
   position: relative;
-  height: 400px;
+  height: 35rem;
+  width: 90rem;
 }
 
-.featuredmoviebanner img {
+.featuredMovieImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+  z-index: 1;
 }
 
-.featuredmoviecontent {
+.overlay {
   position: absolute;
-  bottom: 0;
+  bottom: 8rem;
   left: 0;
   width: 100%;
-  padding: 16px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.062);
+  padding: 20px;
+}
+
+.buttons {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
 }
 
-.featuredmovietitle {
-  font-weight: bold;
-  margin-bottom: 8px;
+.playButton,
+.watchTrailerButton {
+  margin-right: 10px;
 }
 
-.featuredmovieoverview {
-  margin-bottom: 16px;
-}
-
-.featuredmoviebuttons {
-  display: flex;
-  gap: 16px;
+.overview {
+  margin-top: 10px;
+  color: #ffffff;
 }

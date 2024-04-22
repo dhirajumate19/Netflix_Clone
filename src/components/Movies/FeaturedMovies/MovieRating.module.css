@@ -1,0 +1,12 @@
+/* Rating.module.css */
+.ratingContainer {
+  display: inline-block;
+  background-color: #f44336; /* Red color for rating background */
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.rating {
+  color: white; /* White color for rating text */
+  font-size: 14px;
+}

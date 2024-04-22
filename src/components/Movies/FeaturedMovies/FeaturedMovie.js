@@ -6,36 +6,61 @@ import {
   CardMedia,
   Typography,
   Button,
+  Grid,
 } from "@mui/material";
-import mStyle from "./FeaturedMovie.module.css"; // Import the CSS file
+import styles from "./FeaturedMovie.module.css"; // Import the CSS file
+import MovieRating from "./MovieRating";
 
 function FeaturedMovie({ movie }) {
   return (
-    <Card className={mStyle.featuredmoviebanner}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="100%"
-          image={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-          alt={movie.title}
-        />
-        <CardContent className={mStyle.featuredmoviecontent}>
-          <Typography variant="h4" className={mStyle.featuredmovietitle}>
-            {movie.title}
-          </Typography>
-          <Typography variant="body1" className={mStyle.featuredmovieoverview}>
-            {movie.overview}
-          </Typography>
-          <div className={mStyle.featuredmoviebuttons}>
-            <Button variant="contained" color="primary">
+    <Card className={styles.featuredMovie}>
+      <CardMedia
+        component="img"
+        src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+        alt={movie.title}
+        className={styles.featuredMovieImage}
+      />
+      <CardContent className={styles.overlay}>
+        {" "}
+        {/* Apply custom class name */}
+        <Typography variant="h5" component="div">
+          {movie.title}
+        </Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          className={styles.overview}
+        >
+          {movie.overview}
+        </Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          className={styles.overview}
+        >
+          <MovieRating rating={movie.rating} />
+        </Typography>
+        <Grid container spacing={2} className={styles.buttonsContainer}>
+          <Grid item>
+            <Button
+              variant="contained"
+              color="primary"
+              className={styles.playButton}
+            >
               Play
             </Button>
-            <Button variant="outlined" color="secondary">
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={styles.watchTrailerButton}
+            >
               Watch Trailer
             </Button>
-          </div>
-        </CardContent>
-      </CardActionArea>
+          </Grid>
+        </Grid>
+      </CardContent>
     </Card>
   );
 }
